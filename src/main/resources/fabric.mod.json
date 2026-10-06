@@ -2,10 +2,10 @@
 	"schemaVersion": 1,
 	"id": "ruby-mod",
 	"version": "${version}",
-	"name": "Ruby Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Rubies!",
+	"description": "A simple mod adding the Ruby ore",
 	"authors": [
-		"Me!"
+		"hotcocoadotcom"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"cocoa.ruby.client.RubyModClient"
+		],
+		"fabric-datagen": [
+			"cocoa.ruby.client.RubyDataGenerator"
 		]
 	},
 	"mixins": [
