@@ -6,6 +6,7 @@ import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import cocoa.ruby.item.RubyItems;
 
 public class RubyMod implements ModInitializer {
 	public static final String MOD_ID = "ruby-mod";
@@ -22,6 +23,7 @@ public class RubyMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		RubyItems.initialize();
 	}
 
 	public static Identifier id(String path) {
