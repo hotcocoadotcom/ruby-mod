@@ -13,9 +13,9 @@ public class RubyToolMaterial { ;
 
     public static final ToolMaterial RUBY_TOOL_MATERIAL = new ToolMaterial(
             RubyTags.Blocks.INCORRECT_FOR_RUBY_TOOL, // incorrect blocks for drops
-            1350, // durability
-            7.0F, // speed
-            2.5F, // attack damage bonus
+            2531, // durability
+            8.0F, // speed
+            3.5F, // attack damage bonus
             22, // enchantment value
             RubyTags.Items.REPAIRS_RUBY_TOOLS // repair items
 
