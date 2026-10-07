@@ -11,6 +11,7 @@ public class RubyItemIDs {
     }
 
     public static final ResourceKey<Item> RUBY = create("ruby");
+    public static final ResourceKey<Item> UNCUT_RUBY = create("uncut_ruby");
     public static final ResourceKey<Item> RUBY_PICKAXE = create("ruby_pickaxe");
     public static final ResourceKey<Item> RUBY_SWORD = create("ruby_sword");
 }

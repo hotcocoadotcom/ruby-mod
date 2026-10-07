@@ -24,6 +24,7 @@ public class RubyItems {
     }
 
     public static final Item RUBY = register(RubyItemIDs.RUBY, Item::new, new Item.Properties());
+    public static final Item UNCUT_RUBY = register(RubyItemIDs.UNCUT_RUBY, Item::new, new Item.Properties());
     public static final Item RUBY_PICKAXE = register(RubyItemIDs.RUBY_PICKAXE, Item::new, new Item.Properties().pickaxe(RubyToolMaterial.RUBY_TOOL_MATERIAL, 1.5f, -2.8f));
     public static final Item RUBY_SWORD = register(RubyItemIDs.RUBY_SWORD, Item::new, new Item.Properties().sword(RubyToolMaterial.RUBY_TOOL_MATERIAL, 3.0f, -2.6f));
 
@@ -35,6 +36,7 @@ public class RubyItems {
             .title(Component.translatable("rubyTab.ruby-mod"))
             .displayItems((params, output) -> {
                 output.accept(RUBY);
+                output.accept(UNCUT_RUBY);
                 output.accept(RUBY_PICKAXE);
                 output.accept(RUBY_SWORD);
             })
