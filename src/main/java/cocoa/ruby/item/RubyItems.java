@@ -24,7 +24,7 @@ public class RubyItems {
     }
 
     public static final Item RUBY = register(RubyItemIDs.RUBY, Item::new, new Item.Properties());
-    public static final Item RUBY_PICKAXE = register(RubyItemIDs.RUBY_PICKAXE, Item::new, new Item.Properties().pickaxe(RubyToolMaterial.RUBY_TOOL_MATERIAL, 1.5f, -3f));
+    public static final Item RUBY_PICKAXE = register(RubyItemIDs.RUBY_PICKAXE, Item::new, new Item.Properties().pickaxe(RubyToolMaterial.RUBY_TOOL_MATERIAL, 1.5f, -2.8f));
     public static final Item RUBY_SWORD = register(RubyItemIDs.RUBY_SWORD, Item::new, new Item.Properties().sword(RubyToolMaterial.RUBY_TOOL_MATERIAL, 3.0f, -2.6f));
 
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
