@@ -17,7 +17,7 @@ public class RubyArmorMaterial {
     public static final int BASE_DURABILITY = 40;
     public static final ResourceKey<EquipmentAsset> RUBY_ARMOR_MATERIAL_KEY = ResourceKey.create(EquipmentAssets.ROOT_ID, RubyMod.id("ruby"));
 
-    public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new ArmorMaterial(
+    public static final ArmorMaterial INSTANCE = new ArmorMaterial(
             BASE_DURABILITY,
             Map.of(
                     ArmorType.HELMET, 3,
