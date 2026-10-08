@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    " r ",
-    " r ",
-    " s "
+    "r",
+    "r",
+    "s"
   ],
   "key": {
     "r": "ruby-mod:ruby",

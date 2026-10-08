@@ -10,6 +10,9 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Function;
 
@@ -27,7 +30,7 @@ public class RubyItems {
     }
 
     public static final Item RUBY = register(RubyItemIDs.RUBY, Item::new, new Item.Properties());
-    public static final Item UNCUT_RUBY = register(RubyItemIDs.UNCUT_RUBY, Item::new, new Item.Properties());
+
     public static final Item RUBY_PICKAXE = register(RubyItemIDs.RUBY_PICKAXE, Item::new, new Item.Properties().pickaxe(RUBY_TOOL_MATERIAL, 1.5f, -2.8f));
     public static final Item RUBY_SWORD = register(RubyItemIDs.RUBY_SWORD, Item::new, new Item.Properties().sword(RUBY_TOOL_MATERIAL, 3.0f, -2.6f));
     public static final Item RUBY_AXE = register(RubyItemIDs.RUBY_AXE, Item::new, new Item.Properties().axe(RUBY_TOOL_MATERIAL, 3.5f, -3f));
