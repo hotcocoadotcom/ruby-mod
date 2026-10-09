@@ -1,8 +1,12 @@
 package cocoa.ruby.item;
 
+import cocoa.ruby.RubyMod;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.references.BlockItemId;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -12,20 +16,21 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.function.Function;
 
 public class RubyBlocks {
-    private static Block register(BlockItemId id, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties properties) {
-        // Create the block instance
-        Block block = register(id.block(), blockFactory, properties);
+        private static Block register(String name, Function <BlockBehaviour.Properties, Block> function) {
+            Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(RubyMod.MOD_ID, name))));
+            registerBlockItem(name, toRegister);
+            return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(RubyMod.MOD_ID, name), toRegister);
+        }
 
-        // Create the block item instance
-        BlockItem blockItem = new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix().setId(id.item()));
-        Registry.register(BuiltInRegistries.ITEM, id.item(), blockItem);
+        private static void registerBlockItem(String name, Block block) {
+            Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(RubyMod.MOD_ID, name),
+                    new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(RubyMod.MOD_ID, name)))));
+        }
 
-        return block;
-    }
+        public static final Block RUBY_ORE = register(
+            "ruby_ore",
+                properties -> new Block(properties.strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE))
+        );
 
-    public static final Block RUBY_ORE = register(
-            RubyBlockItemIDs.RUBY_ORE,
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.STONE)
-    );
+        public static void initialize() {}
 }

@@ -16,5 +16,5 @@ public class RubyBlockItemIDs {
         return BlockItemId.create(id, id);
     }
 
-    public static final ResourceKey<Block> RUBY_ORE = create("ruby_ore");
+    public static final ResourceKey<Block> RUBY_ORE = create("ruby_ore").block();
 }

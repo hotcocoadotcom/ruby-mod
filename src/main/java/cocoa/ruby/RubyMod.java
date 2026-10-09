@@ -1,5 +1,6 @@
 package cocoa.ruby;
 
+import cocoa.ruby.item.RubyBlocks;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -23,6 +24,7 @@ public class RubyMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		RubyBlocks.initialize();
 		RubyItems.initialize();
 	}
 
