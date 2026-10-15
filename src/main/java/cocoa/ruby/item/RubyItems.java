@@ -76,6 +76,7 @@ public class RubyItems {
                 output.accept(RUBY);
                 output.accept(UNCUT_RUBY);
                 output.accept(RubyBlocks.RUBY_ORE);
+                output.accept(RubyBlocks.DEEPSLATE_RUBY_ORE);
                 output.accept(RUBY_PICKAXE);
                 output.accept(RUBY_SWORD);
                 output.accept(RUBY_AXE);

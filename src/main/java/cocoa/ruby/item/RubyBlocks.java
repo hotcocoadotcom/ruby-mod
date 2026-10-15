@@ -32,5 +32,10 @@ public class RubyBlocks {
                 properties -> new Block(properties.strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE))
         );
 
+        public static final Block DEEPSLATE_RUBY_ORE = register(
+                "deepslate_ruby_ore",
+                properties -> new Block(properties.strength(3f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE))
+        );
+
         public static void initialize() {}
 }
